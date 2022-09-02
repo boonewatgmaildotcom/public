@@ -171,7 +171,7 @@
 		gsap.registerPlugin(MotionPathPlugin);
 
 
-		var revealTL = gsap.timeline({delay:1});
+		var revealTL = gsap.timeline();
 		revealTL
 			.from("#revealCircle", {duration:1, scale:0, ease:"elastic(.8, .5)", transformOrigin:"center"}, "start")
 			.from("#revealIconWrapper", {duration:1, scale:0, ease:"elastic(.8, .6)", transformOrigin:"center"}, "start+=.15")
