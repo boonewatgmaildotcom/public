@@ -177,8 +177,8 @@
 		var revealTL = gsap.timeline();
 		revealTL
 
-			.from("#revealCircle", {duration:1, scale:0, ease:"elastic(.8, .5)", transformOrigin:"center"}, "start")
-			.from("#revealIconWrapper", {duration:1, scale:0, ease:"elastic(.8, .6)", transformOrigin:"center"}, "start+=.15")
+			.from("#revealCircle", {duration:1, scale:0, ease:"elastic(.8, .5)", transformOrigin:"center"}, "phoneIn")
+			.from("#revealIconWrapper", {duration:1, scale:0, ease:"elastic(.8, .6)", transformOrigin:"center"}, "phoneIn+=.15")
 
 			.from("#revealBubble2", {duration:.5, scale:0, ease:"back", transformOrigin:"100% 100%", repeat:-1, yoyo:true, repeatDelay:3 } , "revealBubblesIn1")
 			.from("#revealBubble1", {duration:.5, scale:0, ease:"back", transformOrigin:"50% 100%", repeat:-1, yoyo:true, repeatDelay:4 } , "revealBubblesIn2-=.2")
@@ -200,7 +200,7 @@
 
 
 		
-		console.log("reveal end-4");
+		console.log("reveal end-5");
 
 
 
