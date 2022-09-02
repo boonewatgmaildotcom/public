@@ -1014,9 +1014,8 @@
 		
 		console.log("yes");
 		
-		gsap.registerPlugin(MotionPathPlugin);
-
-
+		console.log("before");
+		
 		var introTL = gsap.timeline({delay:1});
 		introTL
 			.from("#introHandHolder", {duration:1, y:522, ease:"elastic(.5, .4)", transformOrigin:"0% 100%"}, "start")
