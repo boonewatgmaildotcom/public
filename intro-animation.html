@@ -1010,32 +1010,5 @@
 	</g>
 </svg>
 <script>
-		gsap.registerPlugin(MotionPathPlugin);
-
-
-  var introTL = gsap.timeline({delay:1});
-  introTL
-    .from("#introHandHolder", {duration:1, y:522, ease:"elastic(.5, .4)", transformOrigin:"0% 100%"}, "start")
-
-    .from("#introCircle", {duration:1, scale:0, ease:"elastic(1.5, .5)", transformOrigin:"center"}, "phoneIn")
-    .from("#introIconWrapper", {duration:1, scale:0, ease:"elastic(1.5, .5)", transformOrigin:"center"}, "phoneIn+=.15")
-
-    .from("#bubble2", {duration:.5, scale:0, ease:"back", transformOrigin:"100% 100%", repeat:-1, yoyo:true, repeatDelay:3 } , "bubblesIn1")
-    .from("#bubble1", {duration:.5, scale:0, ease:"back", transformOrigin:"50% 100%", repeat:-1, yoyo:true, repeatDelay:4 } , "bubblesIn2-=.2")
-    .from("#bubble3", {duration:.5, scale:0, ease:"back", transformOrigin:"0% 0%", repeat:-1, yoyo:true, repeatDelay:2.6 } , "bubblesIn3-=.2")
-    .from("#bubble4", {duration:.5, scale:0, ease:"back", transformOrigin:"0% 0%", repeat:-1, yoyo:true, repeatDelay:3.5 } , "bubblesIn4-=.2")
-
-    .to("#introIcon1", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath1", align: "#movePath1", autoRotate: false}, repeat:-1}, "start")
-    .to("#introIcon2", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath2", align: "#movePath2", autoRotate: false}, repeat:-1}, "start")
-    .to("#introIcon3", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath3", align: "#movePath3", autoRotate: false}, repeat:-1}, "start")
-    .to("#introIcon6", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath6", align: "#movePath6", autoRotate: -40}, repeat:-1}, "start")
-    .to("#introIcon7", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath7", align: "#movePath7", autoRotate: 170}, repeat:-1}, "start")
-    .to("#introIcon10", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath10", align: "#movePath10", autoRotate: false}, repeat:-1}, "start")
-    .to("#introIcon11", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath11", align: "#movePath11", autoRotate: false}, repeat:-1}, "start")
-    .to("#introIcon12", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath12", align: "#movePath12", autoRotate: false}, repeat:-1}, "start")
-    .to("#introIcon13", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath13", align: "#movePath13", autoRotate: false}, repeat:-1}, "start")
-    .to("#introIcon14", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath14", align: "#movePath14", autoRotate: false}, repeat:-1}, "start")
-    .to("#introIcon15", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath15", align: "#movePath15", autoRotate: false}, repeat:-1}, "start")
-
-    .to(".phonePeople", {duration:.5, stagger:-3, scale:0, ease:"elastic.in(1, .8)", transformOrigin:"center", repeat:-1, repeatDelay:3}, "start+=3")
+console.log("hello);
 </script>
