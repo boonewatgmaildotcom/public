@@ -168,33 +168,35 @@
  	 // <![CDATA[
 
 		console.log("revealAnimation");
-		//gsap.registerPlugin(MotionPathPlugin);
+		gsap.registerPlugin(MotionPathPlugin);
+
+		window.addEventListener('load', (event) => {
+			console.log("reveal animation start")
+			var revealTL = gsap.timeline();
+			revealTL
+				.from("#revealCircle", {duration:1, scale:0, ease:"elastic(.8, .5)", transformOrigin:"center"}, "start")
+				.from("#revealIconWrapper", {duration:1, scale:0, ease:"elastic(.8, .6)", transformOrigin:"center"}, "start")
 
 
-		var revealTL = gsap.timeline();
-		revealTL
-			.from("#revealCircle", {duration:1, scale:0, ease:"elastic(.8, .5)", transformOrigin:"center"}, "start")
-			.from("#revealIconWrapper", {duration:1, scale:0, ease:"elastic(.8, .6)", transformOrigin:"center"}, "start")
+				.from("#revealBubble2", {duration:.5, scale:0, ease:"back", transformOrigin:"100% 100%", repeat:-1, yoyo:true, repeatDelay:3 } , "bubblesIn1")
+				.from("#revealBubble1", {duration:.5, scale:0, ease:"back", transformOrigin:"50% 100%", repeat:-1, yoyo:true, repeatDelay:4 } , "bubblesIn2-=.2")
+				.from("#revealBubble3", {duration:.5, scale:0, ease:"back", transformOrigin:"0% 0%", repeat:-1, yoyo:true, repeatDelay:2.6 } , "bubblesIn3-=.2")
+				.from("#revealBubble4", {duration:.5, scale:0, ease:"back", transformOrigin:"0% 0%", repeat:-1, yoyo:true, repeatDelay:3.5 } , "bubblesIn4-=.2")
+
+				.to("#revealIcon1", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath1", align: "#movePath1", autoRotate: false}, repeat:-1}, "start")
+				.to("#revealIcon2", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath2", align: "#movePath2", autoRotate: false}, repeat:-1}, "start")
+				.to("#revealIcon3", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath3", align: "#movePath3", autoRotate: false}, repeat:-1}, "start")
+				.to("#revealIcon6", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath6", align: "#movePath6", autoRotate: -40}, repeat:-1}, "start")
+				.to("#revealIcon7", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath7", align: "#movePath7", autoRotate: 170}, repeat:-1}, "start")
+				.to("#revealIcon10", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath10", align: "#movePath10", autoRotate: false}, repeat:-1}, "start")
+				.to("#revealIcon11", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath11", align: "#movePath11", autoRotate: false}, repeat:-1}, "start")
+				.to("#revealIcon12", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath12", align: "#movePath12", autoRotate: false}, repeat:-1}, "start")
+				.to("#revealIcon13", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath13", align: "#movePath13", autoRotate: false}, repeat:-1}, "start")
+				.to("#revealIcon14", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath14", align: "#movePath14", autoRotate: false}, repeat:-1}, "start")
+				.to("#revealIcon15", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath15", align: "#movePath15", autoRotate: false}, repeat:-1}, "start")
 
 
-			.from("#revealBubble2", {duration:.5, scale:0, ease:"back", transformOrigin:"100% 100%", repeat:-1, yoyo:true, repeatDelay:3 } , "bubblesIn1")
-			.from("#revealBubble1", {duration:.5, scale:0, ease:"back", transformOrigin:"50% 100%", repeat:-1, yoyo:true, repeatDelay:4 } , "bubblesIn2-=.2")
-			.from("#revealBubble3", {duration:.5, scale:0, ease:"back", transformOrigin:"0% 0%", repeat:-1, yoyo:true, repeatDelay:2.6 } , "bubblesIn3-=.2")
-			.from("#revealBubble4", {duration:.5, scale:0, ease:"back", transformOrigin:"0% 0%", repeat:-1, yoyo:true, repeatDelay:3.5 } , "bubblesIn4-=.2")
-
-			.to("#revealIcon1", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath1", align: "#movePath1", autoRotate: false}, repeat:-1}, "start")
-			.to("#revealIcon2", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath2", align: "#movePath2", autoRotate: false}, repeat:-1}, "start")
-			.to("#revealIcon3", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath3", align: "#movePath3", autoRotate: false}, repeat:-1}, "start")
-			.to("#revealIcon6", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath6", align: "#movePath6", autoRotate: -40}, repeat:-1}, "start")
-			.to("#revealIcon7", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath7", align: "#movePath7", autoRotate: 170}, repeat:-1}, "start")
-			.to("#revealIcon10", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath10", align: "#movePath10", autoRotate: false}, repeat:-1}, "start")
-			.to("#revealIcon11", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath11", align: "#movePath11", autoRotate: false}, repeat:-1}, "start")
-			.to("#revealIcon12", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath12", align: "#movePath12", autoRotate: false}, repeat:-1}, "start")
-			.to("#revealIcon13", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath13", align: "#movePath13", autoRotate: false}, repeat:-1}, "start")
-			.to("#revealIcon14", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath14", align: "#movePath14", autoRotate: false}, repeat:-1}, "start")
-			.to("#revealIcon15", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath15", align: "#movePath15", autoRotate: false}, repeat:-1}, "start")
-
-
+		});
 
 	
 
