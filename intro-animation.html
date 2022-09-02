@@ -1012,7 +1012,7 @@
  	 // <![CDATA[
 
 		
-		console.log("frog");
+		console.log("frog2");
 		
 		
 		gsap.registerPlugin(MotionPathPlugin);
@@ -1022,8 +1022,8 @@
 		introTL
 			.from("#introHandHolder", {duration:1, y:522, ease:"elastic(.5, .4)", transformOrigin:"0% 100%"}, "start")
 
-			.from("#introCircle", {duration:1, scale:0, ease:"elastic(1.5, .5)", transformOrigin:"center"}, "phoneIn")
-			.from("#introIconWrapper", {duration:1, scale:0, ease:"elastic(1.5, .5)", transformOrigin:"center"}, "phoneIn+=.15")
+			.from("#introCircle", {duration:1, scale:0, ease:"elastic(.8, .5)", transformOrigin:"center"}, "phoneIn")
+			.from("#introIconWrapper", {duration:1, scale:0, ease:"elastic(.8, .6)", transformOrigin:"center"}, "phoneIn+=.15")
 
 			.from("#bubble2", {duration:.5, scale:0, ease:"back", transformOrigin:"100% 100%", repeat:-1, yoyo:true, repeatDelay:3 } , "bubblesIn1")
 			.from("#bubble1", {duration:.5, scale:0, ease:"back", transformOrigin:"50% 100%", repeat:-1, yoyo:true, repeatDelay:4 } , "bubblesIn2-=.2")
@@ -1043,6 +1043,8 @@
 			.to("#introIcon15", { duration: "random(12, 20)", ease: "none", motionPath:{ path: "#movePath15", align: "#movePath15", autoRotate: false}, repeat:-1}, "start")
 
 			.to(".phonePeople", {duration:.5, stagger:-3, scale:0, ease:"elastic.in(1, .8)", transformOrigin:"center", repeat:-1, repeatDelay:3}, "start+=3")
+
+
 		
 		console.log("done2");
 
